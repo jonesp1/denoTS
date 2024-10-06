@@ -1,12 +1,26 @@
-const arr: number[] = [1,2,3]
+function insertAt(arr: number[], element: number, index: number): number[] {
+  if (index < 0 || index > arr.length) {
+    console.log("index out of bounds")
+  }
+  const newArr = [...arr]
 
-arr.push(4)
-for(let i = 0; i< arr.length; i++) {
-  console.log(arr[i])
+  for (let i = 0; i < newArr.length; i++) {
+    if (i < index) {
+      newArr[i] = arr[i]
+    } else if (i === index) {
+      newArr[i] = element
+    } else {
+      newArr[i] = arr[i - 1]
+    }
+  }
+  return newArr
+
 }
-arr.pop()
-console.log("")
-arr.forEach(element => {
-  console.log(element)
-});
+
+const originalArray = [1, 2, 3, 4, 5];
+const element = 10;
+const indexToInsert = 2;
+
+const newArray = insertAt(originalArray,element,indexToInsert);
+console.log(newArray)
 
