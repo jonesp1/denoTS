@@ -1,8 +1,12 @@
-export function add(a: number, b: number): number {
-  return a + b;
-}
+const arr: number[] = [1,2,3]
 
-// Learn more at https://deno.land/manual/examples/module_metadata#concepts
-if (import.meta.main) {
-  console.log("Add 2 + 3 =", add(2, 3));
+arr.push(4)
+for(let i = 0; i< arr.length; i++) {
+  console.log(arr[i])
 }
+arr.pop()
+console.log("")
+arr.forEach(element => {
+  console.log(element)
+});
+
