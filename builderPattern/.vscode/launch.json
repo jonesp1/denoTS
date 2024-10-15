@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Deno Debug",
+        "type": "pwa-node",
+        "request": "launch",
+        "program": "${workspaceFolder}/main.ts",  // or the path to your entry file
+        "cwd": "${workspaceFolder}",
+        "runtimeExecutable": "deno",
+        "runtimeArgs": [
+          "run",
+          "--inspect-brk",  // Inspect and pause on the first line
+          "--allow-net",    // Example permission (optional)
+          "--allow-read"    // Example permission (optional)
+        ],
+        "attachSimplePort": 9229,
+        "outputCapture": "std"
+      }
+    ]
+  }

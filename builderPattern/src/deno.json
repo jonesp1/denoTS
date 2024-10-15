@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "esnext"]
+  },
+  "tasks": {
+    "start": "deno run --inspect-brk --allow-net --allow-read main.ts"
+  }
+}
